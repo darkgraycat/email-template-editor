@@ -92,7 +92,7 @@ void function($w, $d) {
         if (!start || !end) throw new Error('Regex parsing error')
         const escapedStart = start.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
         const escapedEnd = end.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-        return new RegExp(`${escapedStart}(.*?)${escapedEnd}`, 'gms')
+        return new RegExp(`${escapedStart}(.*?)${escapedEnd}`, 'gm')
     }
 
     function copyToClipboard(text) {
