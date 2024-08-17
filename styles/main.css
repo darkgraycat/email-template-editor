@@ -1,0 +1,158 @@
+/* @variables */
+:root {
+    --fgmain-color: #c1c1c3;
+    --bgmain-color: #222126;
+    --fgerror-color: #dc798c;
+    --bgerror-color: #2c0d0e;
+
+    --border-color: #2f2d31;
+    --outline-color: #111013;
+
+    --click-color: #C08852;
+    --active-color: #5288C0;
+    --inactive-color: #49484e;
+
+    --modal-border-color: #4f429b;
+    --modal-fgmain-color: #4f429b;
+    --modal-bgmain-color: #2a273d;
+    --bglight-color: #222126;
+}
+
+/* @global */
+* { font-family: monospace; }
+*:focus {
+    outline: 2px solid var(--active-color);
+    outline-offset: 2px;
+}
+
+/* @attributes */
+[bordered] {
+    outline: 2px solid var(--outline-color);
+    border: 2px solid var(--border-color);
+    border-radius: 1px;
+    background-color: var(--bgmain-color);
+    padding: 4px;
+}
+[hidden] { display: hidden }
+[scroller] {
+    scrollbar-color: var(--border-color) var(--outline-color);
+    scrollbar-width: thin;
+    overflow-y: auto;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+/* @elements */
+body { 
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    color: var(--fgmain-color);
+    background-color: var(--bgmain-color);
+}
+
+button {
+    color: var(--fgmain-color);
+    border: 1px solid var(--fgmain-color);
+    background-color: var(--inactive-color);
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 4px 8px;
+    transition: background-color 0.3s ease;
+}
+button:hover { background-color: var(--active-color); }
+button:active { background-color: var(--click-color); }
+
+textarea {
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    color: var(--fgmain-color);
+    border: 2px solid var(--border-color);
+    background-color: var(--outline-color);
+}
+
+input, input:-webkit-autofill {
+    width: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+    color: var(--fgmain-color);
+    border: 2px solid var(--border-color);
+    background-color: var(--outline-color);
+    color-scheme: dark; /* fight autofill style */
+}
+
+h2 {
+    margin: 0;
+    padding: 10px 2px;
+}
+
+
+/* @classes */
+.panel {
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* @app elements */
+#left-panel {
+    flex: 4;
+}
+
+#right-panel {
+    flex: 8;
+}
+
+#tags-control, #view-control {
+    display: flex;
+    gap: 12px;
+}
+
+#tags-control input {
+    flex: 1;
+}
+
+#tags-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#tags-list ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin: 0;
+}
+
+#tag-list ul * {
+    color: var(--fgmain-color) !important;
+}
+
+#tags-list li textarea {
+    resize: vertical;
+}
+
+#view-control span {
+    flex: 1;
+}
+
+#view-content {
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+}
+
+#view-content textarea {
+    flex: 1;
+    resize: none;
+    overflow-y: auto;
+}
+
+#view-content div {
+    flex: 1;
+    background-color: var(--modal-bgmain-color);
+    overflow-y: auto;
+}

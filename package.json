@@ -1,0 +1,19 @@
+{
+  "name": "email-template-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "serve": "npx live-server --port=8080 --watch=.",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@dgcat:darkgraycat/email-template-editor.git"
+  },
+  "author": "darkgraycat",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

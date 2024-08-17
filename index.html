@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template Editor</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="script/main.js" defer></script>
+    </head>
+    <body>
+        <div id="left-panel" class="panel">
+            <h2>Controls</h2>
+            <div id="tags-control" bordered>
+                <input id="regex-input" type="text" placeholder="Define tag format...">
+                <button id="parse-btn">Parse</button>
+                <button id="exec-btn">Exec</button>
+            </div>
+            <div id="tags-list" bordered>
+                <ul scroller></ul>
+            </div>
+        </div>
+
+        <div id="right-panel" class="panel">
+            <h2>Template</h2>
+            <div id="view-control" bordered>
+                <button id="copy-btn">Copy</button>
+                <button id="reset-btn">Reset</button>
+                <span> </span>
+                <button id="switch-btn">Source view</button>
+            </div>
+            <div id="view-content" bordered>
+                <div bordered hidden></div>
+                <textarea scroller placeholder="Paste template source code here..."></textarea>
+            </div>
+        </div>
+    </body>
+</html>
